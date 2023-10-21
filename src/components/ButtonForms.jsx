@@ -1,0 +1,65 @@
+import React, { useEffect, useState } from "react";
+
+function ButtonForms({ nombreForm, imagenForm }) {
+  const [infoData, setInfoData] = useState(null);
+
+  useEffect(() => {
+    const storeData = JSON.parse(localStorage.getItem("formData"));
+    if (storeData) {
+      const data = {
+        nombre: storeData.nombre,
+        puesto: storeData.puesto,
+        unidad: storeData.unidad,
+      };
+      setInfoData(data);
+    }
+  }, []);
+
+  const links = {
+    diagnostico: `https://docs.google.com/forms/d/e/1FAIpQLSfqWCgSHnJIrOJJymjtTYGAkNcqF3P80ruPwa75DMxi8PReBg/viewform?usp=pp_url&entry.1353452454=${
+      infoData?.nombre || ""
+    }&entry.561956352=${infoData?.puesto || ""}&entry.1765275942=${
+      infoData?.unidad || ""
+    }`,
+    final: `https://docs.google.com/forms/d/e/1FAIpQLSewU_zZ4jRu7rHUaaITe3P1uf-7iEWEfQ3vT1O2Ekuqos41-w/viewform?usp=pp_url&entry.804343039=${
+      infoData?.nombre || ""
+    }&entry.1654938668=${infoData?.puesto || ""}&entry.1452770886=${
+      infoData?.unidad || ""
+    }`,
+    satisfaccion: `https://docs.google.com/forms/d/e/1FAIpQLScT9w1EkW8I1iPhNaJ4rwVrPlEHDjoqAfPzPVvYJXAKo4y9LQ/viewform?usp=pp_url&entry.975771166=${
+      infoData?.nombre || ""
+    }&entry.625530517=${infoData?.puesto || ""}&entry.1738102319=${
+      infoData?.unidad || ""
+    }`,
+  };
+
+  var linkForm = "";
+  if (nombreForm == "Evaluación Diagnóstica") {
+    linkForm = links.diagnostico;
+  } else if (nombreForm == "Evaluación Final") {
+    linkForm = links.final;
+  } else {
+    linkForm = links.satisfaccion;
+  }
+
+  return (
+    <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-4">
+      <a
+        href={linkForm}
+        target="_blank"
+        className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+      >
+        <img
+          width={250}
+          className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white"
+          src={imagenForm}
+        />
+        <p className="text-center text-[#385623] font-montserrat">
+          {nombreForm}
+        </p>
+      </a>
+    </div>
+  );
+}
+
+export default ButtonForms;
