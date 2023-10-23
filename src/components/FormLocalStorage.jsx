@@ -45,7 +45,7 @@ function FormLocalStorage({ onDatosIngresados }) {
   return (
     <div className="block max-w-sm p-10 text-[#385623] font-montserrat bg-white border border-gray-200 rounded-lg shadow">
       <h2 className="text-2xl text-center font-montserrat mb-4">
-        Ayudanos con esta información
+        Ayúdanos con esta información
       </h2>
       <form onSubmit={handleSubmit} className="m-4">
         <div className="mb-4">
