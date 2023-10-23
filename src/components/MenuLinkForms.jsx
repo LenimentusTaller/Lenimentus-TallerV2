@@ -12,7 +12,7 @@ function MenuLinkForms() {
       />
       <ButtonForms nombreForm={"Evaluación Final"} imagenForm={ImgFinal} />
       <ButtonForms
-        nombreForm={"Evaluación de Satisfacción"}
+        nombreForm={"Encuesta de Satisfacción"}
         imagenForm={ImgSatisfa}
       />
     </>
