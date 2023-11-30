@@ -40,7 +40,7 @@ function FormLocalStorage({ onDatosIngresados }) {
 
     localStorage.setItem("formData", JSON.stringify(dataUsuarioForm));
 
-    onDatosIngresados();
+    onDatosIngresados(dataUsuarioForm);
   };
   return (
     <div className="block max-w-sm p-10 text-[#385623] font-montserrat bg-white border border-gray-200 rounded-lg shadow">

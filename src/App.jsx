@@ -5,9 +5,15 @@ import MenuLinkForms from "./components/MenuLinkForms";
 
 function App() {
   const [datosIngresados, setDatosIngresados] = useState(false);
+  const [infoUser, setInfoUser] = useState({
+    nombre: "",
+    puesto: "",
+    unidad: "",
+  });
 
-  const handleDatosIngresados = () => {
+  const handleDatosIngresados = (newData) => {
     setDatosIngresados(true);
+    setInfoUser(newData);
   };
 
   const handleBorrarDatos = () => {
@@ -19,11 +25,21 @@ function App() {
     const storeData = JSON.parse(localStorage.getItem("formData"));
     if (storeData) {
       setDatosIngresados(true);
+      setInfoUser(storeData);
     }
   }, []);
   return (
     <>
       <Header />
+      <div className="container mx-auto my-8 flex justify-center flex-wrap">
+        {datosIngresados ? (
+          <div className="text-2xl p-4 text-[#385623] font-montserrat">
+            Hola, {infoUser.nombre}
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
       <div className="container mx-auto my-8 flex justify-center flex-wrap">
         {datosIngresados ? (
           <MenuLinkForms />
@@ -35,7 +51,7 @@ function App() {
         {datosIngresados ? (
           <button
             onClick={handleBorrarDatos}
-            className="bg-[#385623] text-white p-2 rounded font-montserrat"
+            className="bg-[#385623] text-white p-2 rounded font-montserrat hover:bg-[#284117]"
           >
             Cerrar Sesión
           </button>
