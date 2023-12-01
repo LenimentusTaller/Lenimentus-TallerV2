@@ -19,18 +19,37 @@ function ButtonForms({ nombreForm, imagenForm }) {
   // https://docs.google.com/forms/d/e/1FAIpQLSe8VIgyvwhmPMt6h9s6qkWLqdl-jD78Tz-c8YR7_KoLin2skQ/viewform?usp=pp_url&entry.752906477=diego&entry.196417095=gerente&entry.644614544=refresco
 
   // https://docs.google.com/forms/d/e/1FAIpQLScBrlIc_AzX7vyvqK_NQcU81XVFlujFlzAYizJmf6ZV74Zp6w/viewform?usp=pp_url&entry.975771166=Diego&entry.625530517=Gerente&entry.1738102319=Refrescos
+  //#######Nuevos Links ######
+  // const links = {
+  //   diagnostico: `https://docs.google.com/forms/d/e/1FAIpQLSdK4eemyWIxo-HWAKvmNE1kCnca7BqWsQwGAZPlxEKjoAsRIg/viewform?usp=pp_url&entry.1928284648=${
+  //     infoData?.nombre || ""
+  //   }&entry.419414549=${infoData?.puesto || ""}&entry.601508622=${
+  //     infoData?.unidad || ""
+  //   }`,
+  //   final: `https://docs.google.com/forms/d/e/1FAIpQLSe8VIgyvwhmPMt6h9s6qkWLqdl-jD78Tz-c8YR7_KoLin2skQ/viewform?usp=pp_url&entry.752906477=${
+  //     infoData?.nombre || ""
+  //   }&entry.196417095=${infoData?.puesto || ""}&entry.644614544=${
+  //     infoData?.unidad || ""
+  //   }`,
+  //   satisfaccion: `https://docs.google.com/forms/d/e/1FAIpQLScBrlIc_AzX7vyvqK_NQcU81XVFlujFlzAYizJmf6ZV74Zp6w/viewform?usp=pp_url&entry.975771166=${
+  //     infoData?.nombre || ""
+  //   }&entry.625530517=${infoData?.puesto || ""}&entry.1738102319=${
+  //     infoData?.unidad || ""
+  //   }`,
+  // };
+  //#######Viejos Links ######
   const links = {
-    diagnostico: `https://docs.google.com/forms/d/e/1FAIpQLSdK4eemyWIxo-HWAKvmNE1kCnca7BqWsQwGAZPlxEKjoAsRIg/viewform?usp=pp_url&entry.1928284648=${
+    diagnostico: `https://docs.google.com/forms/d/e/1FAIpQLSfqWCgSHnJIrOJJymjtTYGAkNcqF3P80ruPwa75DMxi8PReBg/viewform?usp=pp_url&entry.1353452454=${
       infoData?.nombre || ""
-    }&entry.419414549=${infoData?.puesto || ""}&entry.601508622=${
+    }&entry.561956352=${infoData?.puesto || ""}&entry.1765275942=${
       infoData?.unidad || ""
     }`,
-    final: `https://docs.google.com/forms/d/e/1FAIpQLSe8VIgyvwhmPMt6h9s6qkWLqdl-jD78Tz-c8YR7_KoLin2skQ/viewform?usp=pp_url&entry.752906477=${
+    final: `https://docs.google.com/forms/d/e/1FAIpQLSewU_zZ4jRu7rHUaaITe3P1uf-7iEWEfQ3vT1O2Ekuqos41-w/viewform?usp=pp_url&entry.804343039=${
       infoData?.nombre || ""
-    }&entry.196417095=${infoData?.puesto || ""}&entry.644614544=${
+    }&entry.1654938668=${infoData?.puesto || ""}&entry.1452770886=${
       infoData?.unidad || ""
     }`,
-    satisfaccion: `https://docs.google.com/forms/d/e/1FAIpQLScBrlIc_AzX7vyvqK_NQcU81XVFlujFlzAYizJmf6ZV74Zp6w/viewform?usp=pp_url&entry.975771166=${
+    satisfaccion: `https://docs.google.com/forms/d/e/1FAIpQLScT9w1EkW8I1iPhNaJ4rwVrPlEHDjoqAfPzPVvYJXAKo4y9LQ/viewform?usp=pp_url&entry.975771166=${
       infoData?.nombre || ""
     }&entry.625530517=${infoData?.puesto || ""}&entry.1738102319=${
       infoData?.unidad || ""
